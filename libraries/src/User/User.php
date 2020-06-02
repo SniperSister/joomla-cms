@@ -644,7 +644,7 @@ class User extends CMSObject
 				$array['password'] = $this->password;
 			}
 
-			// Prevent updating current registration date/last visit date
+			// Prevent updating internal fields
 			unset($array['registerDate']);
 			unset($array['lastvisitDate']);
 			unset($array['lastResetTime']);
