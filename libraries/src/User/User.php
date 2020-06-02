@@ -647,6 +647,8 @@ class User extends CMSObject
 			// Prevent updating current registration date/last visit date
 			unset($array['registerDate']);
 			unset($array['lastvisitDate']);
+			unset($array['lastResetTime']);
+			unset($array['resetCount']);
 		}
 
 		if (\array_key_exists('params', $array))
