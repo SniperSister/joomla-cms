@@ -40,6 +40,14 @@ class SessionCollector  extends AbstractDataCollector
 
 		foreach (Factory::getApplication()->getSession()->all() as $key => $value)
 		{
+			// Unset user credentials
+			if ($key === 'user' && $value['id'])
+			{
+				unset($value['password']);
+				unset($value['otpKey']);
+				unset($value['otep']);
+			}
+
 			$data[$key] = $this->getDataFormatter()->formatVar($value);
 		}
 
