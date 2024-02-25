@@ -180,7 +180,7 @@ class TufAdapter extends UpdateAdapter
                 'type'                => null,
                 'client'              => 'site',
                 'client_id'           => 0,
-                'version'             => "1",
+                'version'             => '1',
                 'data'                => '',
                 'detailsurl'          => '',
                 'infourl'             => '',
